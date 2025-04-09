@@ -1,0 +1,16 @@
+# course config files
+*.yaml
+
+# gradle
+.gradle/
+build
+
+
+# idea config
+.idea
+
+# old stages
+/Readability Score (Java)/*
+!/Readability Score (Java)/task/
+/Readability Score (Java)/task/*
+!/Readability Score (Java)/task/src
