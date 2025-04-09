@@ -6,13 +6,16 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        String filePath = "";
         // --- Input File Handling ---
         if (args.length == 0) {
-            System.err.println("Error: Please provide the input file path as a command-line argument.");
+            System.err.println("Error: No input file path as a command-line argument.");
             System.err.println("Usage: java readability.Main <path_to_file>");
-            return; // Exit if no file path is given
+            filePath = "Readability Score (Java)/task/src/readability/in.txt";
+        } else {
+            filePath = args[0];
         }
-        String filePath = args[0];
+
 
         // --- Readability Calculation ---
         Readability readability;
