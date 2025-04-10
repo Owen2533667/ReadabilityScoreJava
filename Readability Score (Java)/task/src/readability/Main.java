@@ -24,10 +24,10 @@ public class Main {
         } catch (IOException e) {
             System.err.println("Error reading file: " + filePath);
             System.err.println(e.getMessage());
-            return; // Exit on file reading error
+            return;
         } catch (Exception e) {
             System.err.println("An unexpected error occurred during readability calculation:");
-            e.printStackTrace(); // Print stack trace for debugging
+            e.printStackTrace();
             return;
         }
 
@@ -37,11 +37,11 @@ public class Main {
         // --- User Input for Score Type ---
         Scanner scanner = new Scanner(System.in);
         System.out.print("\nEnter the score you want to calculate (ARI, FK, SMOG, CL, all): ");
-        String indexType = scanner.nextLine().trim(); // Use nextLine and trim
+        String indexType = scanner.nextLine().trim();
 
         // --- Print Selected Readability Score(s) ---
         readability.printReadabilityScore(indexType);
 
-        scanner.close(); // Close the scanner
+        scanner.close();
     }
 }
